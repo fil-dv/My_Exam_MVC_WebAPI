@@ -27,10 +27,9 @@ namespace WebApi_exam.Controllers.MVC
         }
 
         [HttpPost]
-        public string Search(object obj)
+        public string Search(ObjForSearch obj)
         {
-            string s = "World";
-            return string.Format("Hello {0}", s );
+            return string.Format("id - {0} str - {1}", obj.Id, obj.Str);            
         }
 
 

@@ -172,6 +172,7 @@
     <Compile Include="Models\ArgListForFind.cs" />
     <Compile Include="Models\FindEnum.cs" />
     <Compile Include="Models\FindArgument.cs" />
+    <Compile Include="Models\ObjForSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
