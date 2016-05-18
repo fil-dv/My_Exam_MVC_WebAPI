@@ -1,0 +1,79 @@
+﻿@using WebApi_exam.Models;
+@model WebApi_exam.Models.ArgListForFind
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Главная</h2>
+
+
+@*@{var listItems = new List<FindArgument>
+    {
+        new FindArgument { ArgId = 1, ArgName = "RentName" },       /*RentName*/
+        new FindArgument { ArgId = 2, ArgName = "dogovor" },        /*dogovor*/
+        new FindArgument { ArgId = 3, ArgName = "EDRPOU" },         /*EDRPOU*/
+        new FindArgument { ArgId = 4, ArgName = "RentAddress" },    /*RentAddress*/
+        new FindArgument { ArgId = 5, ArgName = "DateEnd" }         /*DateEnd*/
+    };
+}
+@Html.DropDownList("Args", new SelectList(listItems, "ArgId", "ArgName"))*@
+
+<br /><br />
+<table>
+    <tr>
+        <td>Выберите параметр поиска:</td>
+        <td>@Html.DropDownList("drop", new SelectList(Model.ArgList as System.Collections.IEnumerable, "ArgId", "ArgName"), new { id = "ArgId", @class = "select-class" })</td>
+        <td> и введите данные для поиска:</td>
+        <td><input type="text" id="arg" /></td>
+    </tr>
+</table>
+
+<br />
+
+<div id="Res"></div>
+
+@section script
+{   
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/scripts/jquery-2.2.3.min.js"></script>
+
+    <script>
+        $(function () {
+            
+            function GetCities() {
+
+                var id = $("#Argument").val();
+                                                                                    //$("#Reg").load("/Region_DDL_/GetCities/" + id);
+                //$.ajax({
+                //    type: 'GET',
+                //    url: '/Region_DDL_/GetCities/',
+                //    data: id,
+                //    success: function (data) {
+                //        $('#Reg').html(data);
+                //    }
+                //});
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/Region_DDL_/GetCities/',
+                    data: {id:id},
+                    success: function (data) {
+                        $('#Reg').html(data);
+                    }
+                });
+            }
+
+            //GetCities();
+
+            $("#drop").change(function () {
+                var end = this.value;
+                alert(end);
+                alert("Changed!");
+                var id = this.val();
+                alert(id);
+                //GetCities();
+            });
+        });
+    </script>
+}

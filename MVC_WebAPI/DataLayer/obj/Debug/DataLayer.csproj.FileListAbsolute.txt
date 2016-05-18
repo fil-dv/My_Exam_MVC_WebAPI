@@ -1,0 +1,9 @@
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\bin\Debug\DataLayer.dll.config
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\bin\Debug\DataLayer.dll
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\bin\Debug\DataLayer.pdb
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\bin\Debug\EntityFramework.dll
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\bin\Debug\EntityFramework.xml
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\obj\Debug\DataLayer.dll
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\obj\Debug\DataLayer.pdb

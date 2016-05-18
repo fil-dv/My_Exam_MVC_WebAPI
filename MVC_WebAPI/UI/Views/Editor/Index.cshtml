@@ -1,0 +1,110 @@
+﻿@model IEnumerable<DataLayer.DBLayer.Rent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dogovor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDRPOU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactaName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LegalAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RentAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SquareArea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Credit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Debet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dogovor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateEnd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDRPOU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactaName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LegalAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SquareArea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Credit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Debet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Latitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longitude)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RentId })
+        </td>
+    </tr>
+}
+</table>
