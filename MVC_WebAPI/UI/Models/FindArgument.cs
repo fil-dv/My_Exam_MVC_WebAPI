@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WebApi_exam.Models
+namespace UI.Models
 {
     public class FindArgument
     {

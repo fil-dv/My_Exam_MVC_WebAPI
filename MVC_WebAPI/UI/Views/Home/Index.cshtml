@@ -1,5 +1,5 @@
-﻿@using WebApi_exam.Models;
-@model WebApi_exam.Models.ArgListForFind
+﻿@using UI.Models;
+@model UI.Models.ArgListForFind
 
 @{
     ViewBag.Title = "Index";
@@ -23,9 +23,9 @@
 <table>
     <tr>
         <td>Выберите параметр поиска:</td>
-        <td>@Html.DropDownList("drop", new SelectList(Model.ArgList as System.Collections.IEnumerable, "ArgId", "ArgName"), new { id = "ArgId", @class = "select-class" })</td>
+        <td>@Html.DropDownList("Arguments", new SelectList(Model.ArgList as System.Collections.IEnumerable, "ArgId", "ArgName"), new { id = "drop", @class = "select-class" })</td>
         <td> и введите данные для поиска:</td>
-        <td><input type="text" id="arg" /></td>
+        <td><input type="text" id="str" /></td>
     </tr>
 </table>
 
@@ -41,10 +41,10 @@
     <script>
         $(function () {
             
-            function GetCities() {
+            function Find(id) {
 
-                var id = $("#Argument").val();
-                                                                                    //$("#Reg").load("/Region_DDL_/GetCities/" + id);
+                //var id = $("#Argument").val();
+                var str = $('#str').val();                                                                    //$("#Reg").load("/Region_DDL_/GetCities/" + id);
                 //$.ajax({
                 //    type: 'GET',
                 //    url: '/Region_DDL_/GetCities/',
@@ -53,26 +53,24 @@
                 //        $('#Reg').html(data);
                 //    }
                 //});
+                alert("id = " + id + ", str = " + str);
 
                 $.ajax({
                     type: 'POST',
-                    url: '/Region_DDL_/GetCities/',
-                    data: {id:id},
+                    url: '/Home/Search/',
+                    data: {id:id, str:str},
                     success: function (data) {
-                        $('#Reg').html(data);
+                        $('#Res').html(data);
                     }
                 });
             }
 
-            //GetCities();
+            Find();
 
             $("#drop").change(function () {
-                var end = this.value;
-                alert(end);
-                alert("Changed!");
-                var id = this.val();
-                alert(id);
-                //GetCities();
+                var id = this.value;
+                //alert(id);
+                Find(id);
             });
         });
     </script>
