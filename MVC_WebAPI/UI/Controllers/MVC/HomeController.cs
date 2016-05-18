@@ -1,4 +1,5 @@
 ﻿using DataLayer.DBLayer;
+using DataLayer.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,16 @@ namespace WebApi_exam.Controllers.MVC
         [HttpPost]
         public string Search(ObjForSearch obj)
         {
-            return string.Format("id - {0} str - {1}", obj.Id, obj.Str);            
+            Searcher sercher = new Searcher(context, obj.Id, obj.Str);
+            var res = sercher.Search();
+            string str = String.Empty;
+
+            foreach (var item in res)
+            {
+                str = str += item.ContactaName;    
+            }
+            return str;
+            // return string.Format("id - {0} str - {1}", obj.Id, obj.Str);            
         }
 
 

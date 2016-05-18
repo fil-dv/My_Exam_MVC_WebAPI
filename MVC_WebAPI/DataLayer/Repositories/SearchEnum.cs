@@ -1,6 +1,7 @@
-﻿namespace UI.Models
+﻿
+namespace DataLayer.Repositories
 {
-    enum FindEnum
+    enum SearchEnum
     {
         RentName = 1,
         dogovor = 2,
