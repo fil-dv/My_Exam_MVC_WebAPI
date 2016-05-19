@@ -13,8 +13,13 @@ namespace WebApi_exam.Controllers.MVC
     public class HomeController : Controller
     {
 
-        RentDBModel context = new RentDBModel();
-        
+        IGenericRepository<Rent> _repository;
+
+        public HomeController(IGenericRepository<Rent> repository)
+        {
+            _repository = repository;
+        }
+
 
         public ActionResult Index()
         {
@@ -31,7 +36,7 @@ namespace WebApi_exam.Controllers.MVC
         [HttpPost]
         public string Search(ObjForSearch obj)
         {
-            Searcher sercher = new Searcher(context, obj.Id, obj.Str);
+            Searcher sercher = new Searcher(_repository, obj.Id, obj.Str);
             var res = sercher.Search();
             string str = String.Empty;
 

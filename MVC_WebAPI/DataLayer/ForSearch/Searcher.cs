@@ -1,4 +1,5 @@
 ﻿using DataLayer.DBLayer;
+using DataLayer.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,22 +11,23 @@ namespace DataLayer.ForSearch
 {
     public class Searcher
     {
-        RentDBModel _context;
+        IGenericRepository<Rent> _repository;
+
         SearchEnum _searchArg;
         string _searchStr;
 
-        public Searcher(RentDBModel context, int searchArg, string searchStr)
+        public Searcher(IGenericRepository<Rent> repository, int searchArg, string searchStr)
         {
             if (searchArg >= 1 && searchArg <= 5)
             {
-                _context = context;
+                _repository = repository;
                 _searchArg = (SearchEnum)searchArg;
                 _searchStr = searchStr;
             }
             else
             {
                 return;
-                throw new ArgumentOutOfRangeException();
+                //throw new ArgumentOutOfRangeException();
             }
         }
 
@@ -36,27 +38,27 @@ namespace DataLayer.ForSearch
             switch (_searchArg)
             {
                 case SearchEnum.DateEnd:
-                    list = from r in _context.Rents
+                    list = from r in _repository.GetAll()
                            where r.DateEnd.Equals(_searchStr)
                            select r;
                     break;
                 case SearchEnum.dogovor:
-                    list = from r in _context.Rents
+                    list = from r in _repository.GetAll()
                            where r.dogovor.Contains(_searchStr)
                            select r;  
                     break;
                 case SearchEnum.EDRPOU:
-                    list = from r in _context.Rents
+                    list = from r in _repository.GetAll()
                            where r.EDRPOU.Contains(_searchStr)
                            select r;
                     break;
                 case SearchEnum.RentAddress:
-                    list = from r in _context.Rents
+                    list = from r in _repository.GetAll()
                            where r.RentAddress.Contains(_searchStr)
                            select r;
                     break;
                 case SearchEnum.RentName:
-                    list = from r in _context.Rents
+                    list = from r in _repository.GetAll()
                            where r.RentName.Contains(_searchStr)
                            select r;
                     break;
