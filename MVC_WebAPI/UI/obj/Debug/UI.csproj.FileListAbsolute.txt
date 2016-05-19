@@ -65,3 +65,4 @@ D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\WebActi
 D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\Ninject.xml
 D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\Ninject.Web.Common.xml
 D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\Ninject.Web.Mvc.xml
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\GoogleMaps.LocationServices.dll

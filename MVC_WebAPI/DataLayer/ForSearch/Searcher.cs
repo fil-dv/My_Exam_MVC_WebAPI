@@ -18,7 +18,7 @@ namespace DataLayer.ForSearch
 
         public Searcher(IGenericRepository<Rent> repository, int searchArg, string searchStr)
         {
-            if (searchArg >= 1 && searchArg <= 5)
+            if (searchArg >= 1 && searchArg <= 5 && searchStr != null)
             {
                 _repository = repository;
                 _searchArg = (SearchEnum)searchArg;

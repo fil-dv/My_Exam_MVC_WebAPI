@@ -103,7 +103,8 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.RentId }) |
             @Html.ActionLink("Details", "Details", new { id=item.RentId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RentId })
+            @Html.ActionLink("Delete", "Delete", new { id=item.RentId }) |
+            @Html.ActionLink("Get Coordinates", "../Services/Coordinates/GetCoordinates", new { id = item.RentId })
         </td>
     </tr>
 }

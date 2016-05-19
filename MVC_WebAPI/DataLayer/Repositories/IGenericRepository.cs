@@ -15,6 +15,6 @@ namespace DataLayer.Repositories
         T Get(int id);
         //void Save(T obj);
         void AddOrUpdate(T obj);
-        void Delete(T obj);
+        void Delete(T obj);      
     }
 }

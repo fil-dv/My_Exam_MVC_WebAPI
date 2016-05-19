@@ -26,7 +26,7 @@
         <td>Выберите параметр поиска:</td>
         <td>@Html.DropDownList("Arguments", new SelectList(Model.ArgList as System.Collections.IEnumerable, "ArgId", "ArgName"), new { id = "drop", @class = "select-class" })</td>
         <td> и введите данные для поиска:</td>
-        <td><input type="text" id="str" /></td>
+        <td><input type="text" id="inputStr" /></td>
     </tr>
 </table>
 
@@ -47,39 +47,31 @@
     <script>
         $(function () {
             
+            var text;
+
             function Find(id) {
 
-                //var id = $("#Argument").val();
-                var str = $('#str').val();                                                                    //$("#Reg").load("/Region_DDL_/GetCities/" + id);
-                //$.ajax({
-                //    type: 'GET',
-                //    url: '/Region_DDL_/GetCities/',
-                //    data: id,
-                //    success: function (data) {
-                //        $('#Reg').html(data);
-                //    }
-                //});
-                //alert("id = " + id + ", str = " + str);
-
+                //alert("find id = " + id + "str = " + text)
                 $.ajax({
                     type: 'POST',
                     url: '/Home/Search/',
-                    data: {id:id, str:str},
+                    data: {id:id, str:text},
                     success: function (data) {
                         $('#Res').html(data);
                     }
                 });
             }
-
-            Find();
-
+            
             $("#drop").change(function () {
                 var id = this.value;
                 Find(id);
             });
 
-
-
+            $('#inputStr').on('input', function (e) {
+                var id = $("#drop").val();
+                text = this.value;
+                Find(id);
+            });
         });
     </script>
 }

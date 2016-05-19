@@ -8,11 +8,21 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DataLayer.DBLayer;
+using DataLayer.Repositories;
 
 namespace UI.Controllers.MVC
 {
     public class EditorController : Controller
     {
+
+        //IGenericRepository<Rent> _repository;
+        //public EditorController(IGenericRepository<Rent> repository)
+        //{
+        //    _repository = repository;
+        //}
+
+
+
         private RentDBModel db = new RentDBModel();
 
         // GET: Rents
