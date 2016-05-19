@@ -52,7 +52,7 @@ namespace DataLayer.Repositories
             }
                        
 
-            return null;
+            return list;
         }
 
 

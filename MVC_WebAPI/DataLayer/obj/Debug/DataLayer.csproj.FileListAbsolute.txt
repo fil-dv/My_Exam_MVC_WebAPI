@@ -7,3 +7,4 @@ D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\bin\
 D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
 D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\obj\Debug\DataLayer.dll
 D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\obj\Debug\DataLayer.pdb
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
