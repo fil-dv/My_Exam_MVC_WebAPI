@@ -54,8 +54,11 @@
     <Compile Include="DBLayer\Rent.cs" />
     <Compile Include="DBLayer\RentDBModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\SearchEnum.cs" />
-    <Compile Include="Repositories\Searcher.cs" />
+    <Compile Include="ForSearch\SearchEnum.cs" />
+    <Compile Include="ForSearch\Searcher.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\IGenericRepository.cs" />
+    <Compile Include="Repositories\RentRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

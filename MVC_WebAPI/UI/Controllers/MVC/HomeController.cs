@@ -1,4 +1,5 @@
 ﻿using DataLayer.DBLayer;
+using DataLayer.ForSearch;
 using DataLayer.Repositories;
 using System;
 using System.Collections.Generic;
@@ -36,10 +37,9 @@ namespace WebApi_exam.Controllers.MVC
 
             foreach (var item in res)
             {
-                str = str += ("<br />" + item.ContactaName);
+                str = str += ("<br />" + item.ContactaName + " тел.: " + item.Telephon);
             }
-            return str;
-            // return string.Format("id - {0} str - {1}", obj.Id, obj.Str);            
+            return str;            
         }
 
         // [HttpPost]

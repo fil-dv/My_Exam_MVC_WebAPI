@@ -58,3 +58,10 @@ D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\DataLay
 D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\EntityFramework.xml
 D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\EntityFramework.SqlServer.dll
 D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\EntityFramework.SqlServer.xml
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\Ninject.dll
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\Ninject.Web.Common.dll
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\Ninject.Web.Mvc.dll
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\WebActivatorEx.dll
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\Ninject.xml
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\Ninject.Web.Common.xml
+D:\Дима\!Шаг\ASP\WebAPI\Home\My_Exam_MVC_WebAPI\MVC_WebAPI\UI\bin\Ninject.Web.Mvc.xml

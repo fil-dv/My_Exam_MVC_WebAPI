@@ -1,5 +1,5 @@
 ﻿
-namespace DataLayer.Repositories
+namespace DataLayer.ForSearch
 {
     enum SearchEnum
     {

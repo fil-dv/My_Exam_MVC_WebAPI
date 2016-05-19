@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace DataLayer.Repositories
+namespace DataLayer.ForSearch
 {
     public class Searcher
     {
