@@ -36,12 +36,30 @@ namespace WebApi_exam.Controllers.MVC
 
             foreach (var item in res)
             {
-                str = str += item.ContactaName;    
+                str = str += ("<br />" + item.ContactaName);
             }
             return str;
             // return string.Format("id - {0} str - {1}", obj.Id, obj.Str);            
         }
 
+        // [HttpPost]
+        //public PartialViewResult Search(ObjForSearch obj)
+        //{
+        //    Searcher sercher = new Searcher(context, obj.Id, obj.Str);
+        //    IEnumerable<Rent> list = sercher.Search();
+        //    List<string> nameList = new List<string>();
+        //    foreach (var item in list)
+        //    {
+        //        nameList.Add(item.RentName);
+        //    }
 
+        //    NameList model = new NameList();
+        //    model.Names = nameList;
+
+        //    return PartialView(model);
+
+        //    //RentsList model = new RentsList(list.ToList<Rent>());
+        //    //return PartialView(model);            
+        //}
     }
 }

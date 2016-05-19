@@ -24,6 +24,7 @@ namespace DataLayer.Repositories
             }
             else
             {
+                return;
                 throw new ArgumentOutOfRangeException();
             }
         }
@@ -35,7 +36,9 @@ namespace DataLayer.Repositories
             switch (_searchArg)
             {
                 case SearchEnum.DateEnd:
-
+                    list = from r in _context.Rents
+                           where r.DateEnd.Equals(_searchStr)
+                           select r;
                     break;
                 case SearchEnum.dogovor:
                     list = from r in _context.Rents
@@ -43,18 +46,22 @@ namespace DataLayer.Repositories
                            select r;  
                     break;
                 case SearchEnum.EDRPOU:
+                    list = from r in _context.Rents
+                           where r.EDRPOU.Contains(_searchStr)
+                           select r;
                     break;
                 case SearchEnum.RentAddress:
+                    list = from r in _context.Rents
+                           where r.RentAddress.Contains(_searchStr)
+                           select r;
                     break;
                 case SearchEnum.RentName:
+                    list = from r in _context.Rents
+                           where r.RentName.Contains(_searchStr)
+                           select r;
                     break;
-
-            }
-                       
-
+            }         
             return list;
         }
-
-
     }
 }

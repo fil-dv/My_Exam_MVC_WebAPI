@@ -171,7 +171,9 @@
     </Compile>
     <Compile Include="Models\ArgListForFind.cs" />
     <Compile Include="Models\FindArgument.cs" />
+    <Compile Include="Models\NameList.cs" />
     <Compile Include="Models\ObjForSearch.cs" />
+    <Compile Include="Models\RentsList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +189,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-2.2.3.min.map" />
+    <Content Include="Views\Home\Search.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
